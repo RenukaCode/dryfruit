@@ -1,0 +1,42 @@
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    background: rgb(150, 150, 93);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    margin: 0 0 0 450px;
+}
+
+li{
+    
+     display: inline; 
+    list-style-type: none;
+    padding: 14px 38px;
+    font-size: 25px;
+    text-decoration: none;
+    
+}
+
+.stt{
+    display: block;
+    margin-left: 500px;
+    font-size: 22px;
+}
+
+ .links{
+    text-decoration: none;
+    color: black;
+
+} 
+
+.links:hover{
+    color:  rgb(87, 78, 2);
+} 
+
+.links:active{
+    color: rgb(135, 127, 62);
+}
