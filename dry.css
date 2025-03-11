@@ -11,6 +11,9 @@ nav{
     margin: 0 0 0 450px;
 }
 
+ul{
+    margin-left: 300px;
+}
 li{
     
      display: inline; 
@@ -27,6 +30,14 @@ li{
     font-size: 22px;
 }
 
+.stts{
+    display: block;
+    margin-left: 600px;
+    font-size: 22px;
+    font-family: sans-serif, montserrat;
+    margin-top: -20px;
+}
+
  .links{
     text-decoration: none;
     color: black;
@@ -40,3 +51,54 @@ li{
 .links:active{
     color: rgb(135, 127, 62);
 }
+
+.img{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.imgs{
+    width: 400px;
+    height: 400px;
+    padding:  0 50px;
+}
+
+
+#btn1,#btn2,#btn3{
+    position: absolute;
+    bottom: -550px;
+   margin-left:150px;
+   padding: 12px 50px;
+   background-color:  rgb(73, 51, 25);
+   color: white;
+    border-radius: 19%; 
+}
+
+
+#btn1,#btn2,#btn3:active{
+    background-color:  rgb(88, 66, 33);
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.us{
+    flex: 1;
+    padding: 100px 80px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.contact{
+    font-size: 25px;
+    font-family: Verdana, Tahoma, sans-serif;
+    display: block;
+    padding: 40px 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
