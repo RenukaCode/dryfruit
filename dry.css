@@ -102,3 +102,25 @@ li{
     margin-right: auto;
 }
 
+#fill{
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 550px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin: 40px 0 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #272222;
+}
+
