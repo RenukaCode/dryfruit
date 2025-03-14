@@ -65,18 +65,23 @@ li{
 }
 
 
-#btn1,#btn2,#btn3{
+.sel{
     position: absolute;
     bottom: -550px;
-   margin-left:150px;
+   margin-left:90px;
    padding: 12px 50px;
    background-color:  rgb(73, 51, 25);
    color: white;
     border-radius: 19%; 
 }
 
+#opt{
+    background-color: rgb(73, 51, 25);
+}
 
-#btn1,#btn2,#btn3:active{
+
+
+.sel:active{
     background-color:  rgb(88, 66, 33);
 }
 
@@ -103,13 +108,13 @@ li{
 }
 
 #fill{
-  padding: 20px;
+  padding: 20px 100px ;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
   justify-content: center;
-  margin: 0 550px;
+  margin: 0 450px;
 }
 
 form{
@@ -123,4 +128,9 @@ label{
     font-weight: bold;
     color: #272222;
 }
-
+/* 
+#fs{
+    text-align: left;
+    font-weight: bold;
+    color: #272222; 
+} */
