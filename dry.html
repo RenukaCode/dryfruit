@@ -45,30 +45,30 @@
         <div class = img>
             <div class ="imgs"><img src="https://static.vecteezy.com/system/resources/previews/037/744/772/non_2x/ai-generated-bowl-of-mixed-seeds-and-nuts-on-transparent-background-image-png.png" alt="nuts" class ="imgs">
               <button id = "btn1">Nuts</button>
-              <select id = "btn1">
-                <option value="1">Nuts</option>
-                <option value="1">Almonds</option>
-                <option value="2">Cashews</option>
-                <option value="2">Pistachios</option>
+              <select class = "sel">
+                <option value="1" id="opt">Nuts</option>
+                <option value="1" id="opt">Almonds</option>
+                <option value="2" id="opt">Cashews</option>
+                <option value="2" id="opt">Pistachios</option>
              </select>
             </div>
             <div class ="imgs"><img src="https://static.vecteezy.com/system/resources/previews/044/813/356/non_2x/bowl-of-dried-fruits-top-view-isolated-on-transparent-background-free-png.png" alt="Dried fruits" class ="imgs" >
                 <button id = "btn2">Dried Fruits</button>
-                <select id = "btn2">
-                    <option value="1">Dried Fruits</option>
-                    <option value="d1">Raisins</option>
-                   <option value="d2">Cherries</option>
-                   <option value="d3">Dates</option>
-                   <option value="d4">Figs</option>
+                <select class = "sel">
+                    <option value="1" id="opt">Dried Fruits</option>
+                    <option value="d1"  id="opt">Raisins</option>
+                   <option value="d2"  id="opt">Cherries</option>
+                   <option value="d3"  id="opt">Dates</option>
+                   <option value="d4"  id="opt">Figs</option>
                  </select>
             </div>
             <div class ="imgs"><img src="https://www.cerretobio.com/images/cerreto/prodotti/eng/seeds/mix-of-seeds/mix-of-seeds.png" alt="seeds" class ="imgs">
                 <button id = "btn3">Seeds</button>
-                <select id = "btn3">
-                    <option value="1">Seeds</option>
-                    <option value="2">Chia seeds</option>
-                    <option value="3">Flax seeds</option>
-                    <option value="4">Pumpkin seeds</option>
+                <select class = "sel">
+                    <option value="1"  id="opt">Seeds</option>
+                    <option value="2" id="opt">Chia seeds</option>
+                    <option value="3" id="opt">Flax seeds</option>
+                    <option value="4" id="opt">Pumpkin seeds</option>
       
                  </select>
               
@@ -103,19 +103,30 @@
           <input type="email" id="email" placeholder="Enter your email" required>
             <label for="mobile">Contact:</label>
          <input type="text" id="mobile" placeholder="Enter your number" required>
-         <select name="Fruit Selection" id="fs">
-          <option value="Almonds"></option>
-          <option value="Cashews"></option>
-          <option value="Pistachios"></option>
-          <option value="Walnuts"></option>
-          <option value="Raisins"></option>
-          <option value="Cherries"></option>
-          <option value="Figs"></option>
-          <option value="Dates"></option>
-          <option value="Chai seeds"></option>
-          <option value="Flax seeds"></option>
-          <option value="Pumpkin seeds"></option>
-          <option value="Sunflower seeds"></option>
+         
+         <label>Nut Selection</label>
+         <select id="fs">
+          <option>Select</option>
+          <option>Almonds</option>
+          <option>Cashews</option>
+          <option>Pistachios</option>
+          <option>Walnuts</option>
+          </select>
+          <label>Dried Fruit Selection</label>
+          <select id="fs">
+            <option >Select</option>
+             <option>Raisins</option>
+             <option>Cherries</option>
+             <option>Figs</option>
+             <option>Dates</option>
+          </select>
+          <label>Seeds Selection</label>
+          <select id="fs">
+            <option >Select</option>
+          <option>Chai seeds</option>
+          <option>Flax seeds</option>
+          <option>Pumpkin seeds</option>
+          <option>Sunflower seeds</option>
          </select>
         </form>
       </div>
