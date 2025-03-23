@@ -5,6 +5,7 @@ html{
 *{
     background: rgb(150, 150, 93);
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(73, 51, 25);
 }
 
 nav{
@@ -40,7 +41,7 @@ li{
 
  .links{
     text-decoration: none;
-    color: black;
+    /* color: black; */
 
 } 
 
@@ -68,10 +69,10 @@ li{
 .sel{
     position: absolute;
     bottom: -550px;
-   margin-left:90px;
-   padding: 12px 50px;
-   background-color:  rgb(73, 51, 25);
-   color: white;
+    margin-left:90px;
+    padding: 12px 50px;
+    background-color:  rgb(73, 51, 25);
+    color: white;
     border-radius: 19%; 
 }
 
@@ -95,11 +96,11 @@ li{
     flex: 1;
     padding: 100px 80px;
     border: 1px solid black;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .contact{
-    font-size: 25px;
+    font-size: 22px;
     font-family: Verdana, Tahoma, sans-serif;
     display: block;
     padding: 40px 500px;
@@ -126,11 +127,14 @@ label{
     margin: 40px 0 15px;
     text-align: left;
     font-weight: bold;
-    color: #272222;
+    /* color: #272222; */
 }
-/* 
-#fs{
-    text-align: left;
-    font-weight: bold;
-    color: #272222; 
-} */
+
+#sub{
+    width: 130px;
+    margin-left: 150px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: rgb(73, 51, 25);
+    color: white;
+}
