@@ -16,6 +16,10 @@
                     <li><a href="#products" class="links">Products</a></li>
                     <li><a href="#about" class="links">About Us</a></li>
                     <li><a href="#contact" class="links">Contact</a></li>
+                    <li class="cart-link">
+                        <a href="#" class="links" id="cart-link">Cart</a>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </li>
                 </ul>
             </nav>
 
@@ -34,31 +38,39 @@
             <div class="img">
                 <div class="imgs">
                     <img src="https://static.vecteezy.com/system/resources/previews/037/744/772/non_2x/ai-generated-bowl-of-mixed-seeds-and-nuts-on-transparent-background-image-png.png" alt="nuts">
-                    <select class="sel">
-                        <option value="1">Nuts</option>
-                        <option value="1">Almonds</option>
-                        <option value="2">Cashews</option>
-                        <option value="2">Pistachios</option>
+                    <div class="price">₹299/kg</div>
+                    <select class="sel" id="nuts-select">
+                        <option value="">Select Nuts</option>
+                        <option value="almonds">Almonds</option>
+                        <option value="cashews">Cashews</option>
+                        <option value="pistachios">Pistachios</option>
+                        <option value="walnuts">Walnuts</option>
                     </select>
+                    <button class="add-to-cart" onclick="addToCart('nuts', 'nuts-select', 299)">Add to Cart</button>
                 </div>
                 <div class="imgs">
                     <img src="https://static.vecteezy.com/system/resources/previews/044/813/356/non_2x/bowl-of-dried-fruits-top-view-isolated-on-transparent-background-free-png.png" alt="Dried fruits">
-                    <select class="sel">
-                        <option value="1">Dried Fruits</option>
-                        <option value="d1">Raisins</option>
-                        <option value="d2">Cherries</option>
-                        <option value="d3">Dates</option>
-                        <option value="d4">Figs</option>
+                    <div class="price">₹249/kg</div>
+                    <select class="sel" id="fruits-select">
+                        <option value="">Select Dried Fruits</option>
+                        <option value="raisins">Raisins</option>
+                        <option value="cherries">Cherries</option>
+                        <option value="dates">Dates</option>
+                        <option value="figs">Figs</option>
                     </select>
+                    <button class="add-to-cart" onclick="addToCart('fruits', 'fruits-select', 249)">Add to Cart</button>
                 </div>
                 <div class="imgs">
                     <img src="https://www.cerretobio.com/images/cerreto/prodotti/eng/seeds/mix-of-seeds/mix-of-seeds.png" alt="seeds">
-                    <select class="sel">
-                        <option value="1">Seeds</option>
-                        <option value="2">Chia seeds</option>
-                        <option value="3">Flax seeds</option>
-                        <option value="4">Pumpkin seeds</option>
+                    <div class="price">₹199/kg</div>
+                    <select class="sel" id="seeds-select">
+                        <option value="">Select Seeds</option>
+                        <option value="chia">Chia seeds</option>
+                        <option value="flax">Flax seeds</option>
+                        <option value="pumpkin">Pumpkin seeds</option>
+                        <option value="sunflower">Sunflower seeds</option>
                     </select>
+                    <button class="add-to-cart" onclick="addToCart('seeds', 'seeds-select', 199)">Add to Cart</button>
                 </div>
             </div>  
         </section>
@@ -81,46 +93,40 @@
         </div>
         
         <div id="fill">
-            <form>
-                <h2>Fill out the Info.</h2>
-                <label for="order">Your Order:</label>
-                <input type="text" id="order" placeholder="Enter your order" required>
+            <form id="order-form">
+                <h2>Place Your Order</h2>
+                
+                <div class="success-message" id="success-message"></div>
+                <div class="error-message" id="error-message"></div>
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Enter your email" required>
                 
-                <label for="mobile">Contact:</label>
-                <input type="text" id="mobile" placeholder="Enter your number" required>
+                <label for="mobile">Contact Number:</label>
+                <input type="tel" id="mobile" placeholder="Enter your contact number" required>
                 
-                <label for="nuts">Nut Selection:</label>
-                <select id="nuts">
-                    <option>Select</option>
-                    <option>Almonds</option>
-                    <option>Cashews</option>
-                    <option>Pistachios</option>
-                    <option>Walnuts</option>
-                </select>
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" placeholder="Enter your complete delivery address" required></textarea>
                 
-                <label for="fruits">Dried Fruit Selection:</label>
-                <select id="fruits">
-                    <option>Select</option>
-                    <option>Raisins</option>
-                    <option>Cherries</option>
-                    <option>Figs</option>
-                    <option>Dates</option>
-                </select>
+                <label for="order-notes">Special Instructions (Optional):</label>
+                <textarea id="order-notes" placeholder="Any special requests or notes for your order"></textarea>
                 
-                <label for="seeds">Seeds Selection:</label>
-                <select id="seeds">
-                    <option>Select</option>
-                    <option>Chia seeds</option>
-                    <option>Flax seeds</option>
-                    <option>Pumpkin seeds</option>
-                    <option>Sunflower seeds</option>
-                </select>
-                
-                <input type="submit" id="sub" value="Submit" onclick="alert('Thank you for the order!')">
+                <input type="submit" id="sub" value="Place Order">
             </form>
+        </div>
+
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-cart">&times;</span>
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total" id="cart-total">Total: ₹0</div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
         </div>
 
         <footer>
@@ -132,4 +138,5 @@
         </footer>
     </div>
 </body>
+<script src="dry.js"></script>
 </html>
